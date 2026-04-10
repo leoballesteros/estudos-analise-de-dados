@@ -45,7 +45,30 @@ def preencher_empresa_origem_pelo_cnpj(
     return df_dados
 
 
+def preencher_cliente_destino_pelo_cnpj_cliente(arquivo_dados="dados.csv"):
+    df = pd.read_csv(arquivo_dados, dtype=str)
+
+    mapa = (
+        df[df["cliente_destino"] != "-"]
+        .dropna(subset=["cnpj_cliente", "cliente_destino"])
+        .drop_duplicates(subset=["cnpj_cliente"])
+        .set_index("cnpj_cliente")["cliente_destino"]
+        .to_dict()
+    )
+
+    faltando = df["cliente_destino"] == "-"
+    substituicao = df.loc[faltando, "cnpj_cliente"].map(mapa)
+    df.loc[faltando & substituicao.notna(), "cliente_destino"] = substituicao
+
+    df.to_csv(arquivo_dados, index=False)
+    return df
+
+
 if __name__ == "__main__":
     corrigir_dados()
     gerar_origens_unicas()
     preencher_empresa_origem_pelo_cnpj()
+    preencher_cliente_destino_pelo_cnpj_cliente()
+
+
+
