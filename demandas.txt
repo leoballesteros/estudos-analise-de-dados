@@ -1,0 +1,190 @@
+
+coluna função pegar só operador	manter apenas as colunas
+	              
+desligamento coloca o filtro pra manter tudo o que é vazio e pegar também o que é do mês vigente	
+
+substituir o nome social pra ser o nome do operador 	
+
+no supervisor vem a matricula , nome, precisa tirar a matricula e deixar só o nome	
+
+Todos os operadores que tem a coluna status ativo precisam ter supervisão, escala e data de go live	
+
+
+    
+    CELULA
+
+    MATRICULA22
+    FUNCIONARIO
+
+    
+    NOME SOCIAL
+
+    SUPERVISOR       
+    STATUS
+
+    CARGA_HORARIA
+    DT_DESLIGAMENTO
+
+    FUNCAO
+    GO LIVE COLABORADOR
+
+Você é um analista de dados com python e pandas.
+Contexto:
+preciso que você pegue o arquivo quadro_janeiro_limpo.xlsx gerar um novo arquivo apenas com as colunas
+    CELULA,
+    MATRICULA22,
+    FUNCIONARIO,
+    NOME SOCIAL,
+    SUPERVISOR,     
+    STATUS,
+    CARGA_HORARIA,
+    DT_DESLIGAMENTO,
+    FUNCAO,
+    GO LIVE COLABORADOR,
+O que tenho até aqui:
+- um arquivo quadro_janeiro_limpo.xlsx
+- um ambiente de desenvolvimento em python
+- funções no arquivo script.py 
+- executando funções no main.py
+Objetivo:
+- um novo arquivo com as colunas informadas.
+Regras:
+- façam uma função no arquivo script.py para chegar ao resultado 
+- deixe pronto para executar no main.py 
+- não instale nenhuma outra biblioteca se não for necessário 
+Termine apenas quando:
+o arquivo estiver gerado corretamente. 
+
+
+
+
+1. Papel (quem o modelo é)
+2. Contexto
+3. Dados disponíveis
+4. Tarefa
+5. Regras / Restrições
+6. Formato de saída
+7. Critério de conclusão
+
+
+
+meu_projeto/
+│
+├── data/
+│   ├── raw/              # dados brutos (NUNCA altere)
+│   └── processed/        # dados tratados/limpos
+│
+├── notebooks/
+│   └── analise.ipynb     # exploração inicial (EDA)
+│
+├── src/
+│   ├── __init__.py
+│   ├── load_data.py      # leitura de planilhas
+│   ├── transform.py      # limpeza e transformação
+│   └── analysis.py       # regras de negócio / cálculos
+│
+├── outputs/
+│   ├── figures/          # gráficos
+│   └── reports/          # relatórios finais (Excel, PDF)
+│
+├── requirements.txt      # dependências
+├── README.md             # explicação do projeto
+└── main.py               # script principal (pipeline)
+
+Você é um analista de dados em python com pandas.
+
+Contexto:
+preciso que você implemente uma estrutura de pastas e arquivos 
+meu_projeto/
+│
+├── data/
+│   ├── raw/              # dados brutos (NUNCA altere)
+│   └── processed/        # dados tratados/limpos
+│
+├── notebooks/
+│   └── analise.ipynb     # exploração inicial (EDA)
+│
+├── src/
+│   ├── __init__.py
+│   ├── load_data.py      # leitura de planilhas
+│   ├── transform.py      # limpeza e transformação
+│   └── analysis.py       # regras de negócio / cálculos
+│
+├── outputs/
+│   ├── figures/          # gráficos
+│   └── reports/          # relatórios finais (Excel, PDF)
+│
+├── requirements.txt      # dependências
+├── README.md             # explicação do projeto
+└── main.py               # script principal (pipeline)
+O que tenho até aqui:
+- um ambiente de desenvolvimento em python sem estrutura de pastas e arquivos
+Objetivo:
+- ter uma estrutura pasta para organizar o ambiente de desenvolvimento
+Regras:
+- apenas crie a estrutura de pastas.
+- não altere os arquivos
+Termine apenas quando:
+a estrutura de pasta estiver terminada
+
+
+
+🔗 1. Criar o repositório no GitHub
+
+Vai no 👉 GitHub
+
+Clica em “New repository”
+Dá um nome pro projeto
+Pode deixar sem README (importante pra evitar conflito)
+Clica em Create repository
+💻 2. Ir até sua pasta local
+
+No terminal (PowerShell, CMD ou terminal do VS Code):
+
+cd caminho/da/sua/pasta
+
+Exemplo:
+
+cd C:\Users\Leonardo\Documents\meu-projeto
+⚙️ 3. Inicializar o Git na pasta
+git init
+
+Isso transforma a pasta em um repositório Git.
+
+📦 4. Adicionar os arquivos
+git add .
+
+Depois:
+
+git commit -m "primeiro commit"
+🔌 5. Conectar com o GitHub
+
+Copia a URL do repositório (algo como):
+
+https://github.com/seu-usuario/seu-repo.git
+
+E roda:
+
+git remote add origin URL_DO_REPOSITORIO
+
+Exemplo:
+
+git remote add origin https://github.com/leonardo/meu-projeto.git
+🚀 6. Enviar para o GitHub
+
+Se for a primeira vez:
+
+git branch -M main
+git push -u origin main
+✅ Pronto
+
+Agora tua pasta local está conectada ao GitHub 🎉
+A partir daqui, o fluxo padrão é:
+
+git add .
+git commit -m "mensagem"
+git push
+⚠️ Problemas comuns (pra te poupar dor de cabeça)
+Erro de autenticação → hoje o GitHub usa token, não senha
+Repositório já tem README → pode dar conflito no push inicial
+Branch master vs main → resolvido com git branch -M main
